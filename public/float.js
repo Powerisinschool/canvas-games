@@ -36,14 +36,12 @@ document.body.onkeyup = () => { dir = ''; }
 
 if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', (e) => {
-        var x = e.beta;  // In degree in the range [-180,180)
-        var y = e.gamma; // In degree in the range [-90,90)
+        var x = e.gamma;
 
         if (x >  90) { x =  90};
         if (x < -90) { x = -90};
 
         x += 90;
-        y += 90;
 
         if (x < 80) {
             dir = 'left';
