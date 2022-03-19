@@ -4,6 +4,8 @@ let centerX = window.innerWidth / 2;
 let centerY = window.innerHeight / 2;
 let thirdY = (window.innerHeight / 3) * 2;
 
+var maxX = window.innerWidth;
+
 let x = centerX;
 let y = thirdY;
 
@@ -39,6 +41,17 @@ if (window.DeviceOrientationEvent) {
 
         if (x >  90) { x =  90};
         if (x < -90) { x = -90};
+
+        x += 90;
+        y += 90;
+
+        if (x < 80) {
+            dir = 'left';
+        } else if (x > 100) {
+            dir = 'right';
+        } else {
+            dir = '';
+        }
     }, false);
 }
 
@@ -76,7 +89,7 @@ const draw = () => {
 
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
-    image.src = 'balloon.svg';
+    image.src = 'assets/balloon.svg';
     context.drawImage(image, x - 50, y, 100, 140);
 
     if (dir == 'right') {
