@@ -1,0 +1,1 @@
+document.body.innerHTML = '<h1>Error Loading the selected game!</h1>';
