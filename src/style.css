@@ -2,10 +2,15 @@
     margin: 0;
 }
 
+*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 body {
-    overflow: hidden;
-    /* overflow-x: hidden;
-    overflow-y: scroll; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 #canvas {
