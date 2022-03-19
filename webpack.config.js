@@ -5,7 +5,6 @@ module.exports = {
         static: './dist',
     },
     entry: './src/index.js',
-    mode: 'development',
     output: {
         filename: 'gamma.js',
         path: path.resolve(__dirname, 'dist'),
