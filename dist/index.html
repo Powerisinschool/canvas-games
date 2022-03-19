@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamma Games</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul.games>li {
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Select a game</p>
+    <ul class="games">
+        <li class="game">Coin Collector</li>
+        <li class="game">Float</li>
+    </ul>
+    <!-- <canvas id="canvas" width="600" height="400">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <br /><br />
+    <div align="center">
+        <button id="up">&uarr;</button><br />
+        <button id="left">&larr;</button>
+        <button id="down">&darr;</button>
+        <button id="right">&rarr;</button>
+    </div> -->
+    <script src="gamma.js"></script>
+    <!-- <script>
+        window.onload = async () => {
+            let games = document.body.querySelectorAll('.game');
+            for (let i = 0; i < games.length; i++) {
+                const game = games[i]
+                game.onclick = () => {
+                    selectGame(game.innerText);
+                }
+            }
+
+            const gamepad = () => {
+                let arrows = document.createElement('div');
+                arrows.align = 'center';
+                let br = document.createElement('br');
+
+                let upButton = document.createElement('button');
+                upButton.id = 'up';
+                upButton.innerHTML = '&uarr;';
+
+                let leftButton = document.createElement('button');
+                leftButton.id = 'left';
+                leftButton.innerHTML = '&larr;';
+
+                let downButton = document.createElement('button');
+                downButton.id = 'down';
+                downButton.innerHTML = '&darr;';
+
+                let rightButton = document.createElement('button');
+                rightButton.id = 'right';
+                rightButton.innerHTML = '&rarr;';
+
+                arrows.append(...[upButton, br, leftButton, downButton, rightButton]);
+                return arrows;
+            }
+
+            const coinCollector = (script) => {
+                let container = document.createElement('div');
+                let canvas = document.createElement('canvas');
+                canvas.setAttribute('width', '600');
+                canvas.setAttribute('height', '400');
+                canvas.id = 'canvas';
+                container.appendChild(canvas);
+
+                container.appendChild(gamepad());
+                script.src = "coin-collector.js";
+                return container;
+            }
+
+            const floatGame = (script) => {
+                let container = document.createElement('div');
+                let canvas = document.createElement('canvas');
+                canvas.setAttribute('width', '600');
+                canvas.setAttribute('height', '400');
+                canvas.id = 'canvas';
+                container.appendChild(canvas);
+
+                script.src = "float.js";
+                return container;
+            }
+
+            const selectGame = (game) => {
+                document.body.innerHTML = 'Loading...<br />Please Wait.';
+                let element = document.createElement('span');
+                let script = document.createElement('script');
+                script.src = "script.js";
+                switch (game.toLowerCase()) {
+                    case 'coin collector':
+                        element = coinCollector(script);
+                        break;
+
+                    case 'float':
+                        element = floatGame(script);
+                        break;
+
+                    default:
+                        break;
+                }
+                document.body.innerHTML = element.outerHTML;
+                document.title = game
+                document.body.appendChild(script);
+            }
+        }
+    </script> -->
+</body>
+
+</html>
